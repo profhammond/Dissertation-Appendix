@@ -1,0 +1,355 @@
+% TEMPORARY REPOSITORY STAGING FILE
+% Do not include this file in main.tex.
+% Material here will be organized for the dissertation repository.
+% Preserve original table/figure files and provenance records until migration is complete.
+
+\chapter{Repository Staging Material}
+\label{app:repository_staging}
+
+\section{Material Migrated from Appendix A}
+% Experimental listings and supporting classification exports.
+\section{Complete Internal Model Listing}
+
+Table~\ref{tab:tbl_appA_complete_experiment_matrix} lists the 112 unique models in the internal dermoscopic corpus. The listing was reconstructed from the canonical manifest using the preprocessing-condition and baseline experiment identifiers rather than inferred solely from the nominal factorial design. Models supporting more than one evaluation configuration are listed once, with all applicable configurations identified in the table.
+
+The five external configurations contributed 140 configuration-specific models, comprising 120 preprocessing-condition models and 20 baseline models. Together with the deduplicated internal corpus, these models produced the expanded total of 252 unique models. Their aggregate counts are reported in Table~\ref{tab:tbl_appA_experiment_manifest_summary}; a second row-by-row listing is omitted because it would repeat the same seven model conditions and four resolutions for each external configuration without adding methodological information.
+
+\input{tables/tbl_appA_complete_experiment_matrix.tex}
+
+\section{Material Migrated from Appendix B}
+% Extended EDI tables, numerical exports, and supplementary plots.
+
+\section{Configuration-Specific Preprocessing Rankings}
+
+Table~\ref{tab:appB_preprocessing_rank_by_configuration} reports preprocessing ranks calculated independently within each evaluation configuration. Rank 1 identifies the preprocessing condition with the lowest mean primary EDI in that configuration; this designation reflects attribution-map agreement and should not be interpreted as a ranking of preprocessing quality or clinical suitability.
+
+\input{tables/tbl_appB_preprocessing_rank_by_configuration}
+
+The configuration-specific rankings show whether the aggregate ordering persists across imaging settings and identify configurations in which preprocessing-condition rankings differ from the overall pattern. These ranks are descriptive comparisons of mean attribution agreement with matched baseline maps; they do not establish preprocessing quality, attribution faithfulness, clinical superiority, or causal effects.
+
+\section{Resolution-Specific EDI Summary}
+
+Table~\ref{tab:appB_resolution_edi_summary} reports mean primary EDI for every preprocessing-by-resolution combination. Each cell contains 2,160 paired comparisons derived from nine evaluation configurations, six attribution methods, and 40 images.
+
+\input{tables/tbl_appB_resolution_edi_summary}
+
+The resolution-specific results distinguish the aggregate effect of image scale from configuration-specific resolution behavior. As discussed in Chapter~5, the overall resolution pattern was nonmonotonic, and individual configurations did not necessarily follow the same ordering.
+
+\section{Supplementary EDI Figures}
+
+Figure~\ref{fig:appendix_b_edi_distribution_boxplots} presents the expanded-cohort primary EDI distributions across preprocessing conditions. Boxes represent the interquartile range, horizontal lines represent medians, and black triangular markers represent means. Whiskers extend to the conventional \(1.5\)-interquartile-range limits; individual observations beyond the whiskers are suppressed to preserve readability.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.95\textwidth]{figures/fig_appendix_b_edi_distribution_boxplots.png}
+\caption{Expanded-cohort primary EDI distributions across preprocessing conditions. Each condition contains 8,640 paired attribution comparisons. Lower values indicate greater agreement with matched baseline attribution maps.}
+\label{fig:appendix_b_edi_distribution_boxplots}
+\end{figure}
+
+Figure~\ref{fig:appendix_b_preprocessing_edi_comparison} presents mean primary EDI for every evaluation-configuration and preprocessing-condition combination. The heatmap preserves configuration-specific differences that are obscured by the aggregate preprocessing means.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.95\textwidth]{figures/fig_appendix_b_preprocessing_edi_comparison.png}
+\caption{Mean primary EDI by evaluation configuration and preprocessing condition. Cell annotations report configuration-specific means across six attribution methods, four resolutions, and 40 images per factorial cell.}
+\label{fig:appendix_b_preprocessing_edi_comparison}
+\end{figure}
+
+Figure~\ref{fig:appendix_b_resolution_edi_analysis} shows the mean primary EDI trajectory across the four image resolutions for each preprocessing condition. Each plotted preprocessing-by-resolution mean is based on 2,160 paired comparisons.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.95\textwidth]{figures/fig_appendix_b_resolution_edi_analysis.png}
+\caption{Mean primary EDI across image resolutions for each preprocessing condition. The profiles demonstrate that resolution effects differed among preprocessing conditions and should not be interpreted as a universal monotonic relationship.}
+\label{fig:appendix_b_resolution_edi_analysis}
+\end{figure}
+
+
+\section{Material Migrated from Appendix C}
+% Supplementary image and attribution galleries, selection records, and provenance.
+
+\section{Example Selection and Provenance}
+
+Table~\ref{tab:appendix_c_gradcam_examples} identifies the supplementary examples included in this appendix. For each displayed comparison, the table reports the evaluation configuration, image identifier, preprocessing condition, image resolution, attribution method, and primary EDI value, where applicable.
+
+\input{tables/tbl_appendix_c_gradcam_examples}
+
+The figures constitute a descriptive subset of the internal dermoscopic cohort. They are included to make the preprocessing transformations and paired attribution comparisons visually accessible, not to estimate the frequency of a particular attribution pattern or establish the relative superiority of a preprocessing method. Aggregate conclusions are based on the complete analytical cohorts reported in Chapters~4 and~5.
+
+Baseline and preprocessing-condition images retained the same source-image identity. When attribution maps were displayed, the paired maps additionally used the same resolution and attribution method. These requirements preserved the comparison unit used throughout the EDI analysis and prevented visual differences caused by unmatched images or experimental conditions from being interpreted as preprocessing-associated explanation drift.
+
+
+\section{Baseline Image and Attribution Examples}
+
+Figure~\ref{fig:appendix_c_gradcam_baseline} presents representative baseline-condition examples and their associated Grad-CAM visualizations. The baseline condition contains the standardized image inputs without application of one of the six evaluated preprocessing transformations. It serves as the reference condition against which each preprocessing-condition attribution map was compared during EDI calculation.
+
+The examples provide visual context for the baseline side of the paired comparisons. They are descriptive illustrations and should not be interpreted as evidence that the highlighted regions are clinically correct or that Grad-CAM is faithful to every aspect of the underlying prediction.
+
+\begin{figure}[H]
+\centering
+\includegraphics[height=0.85\textheight,keepaspectratio]{figures/fig_appendix_c_gradcam_baseline.png}
+\caption{Representative baseline-condition examples and associated Grad-CAM visualizations used as references for paired preprocessing comparisons.}
+\label{fig:appendix_c_gradcam_baseline}
+\end{figure}
+
+
+
+%==========================================================================================
+\section{DullRazor Image and Attribution Examples}
+
+Figure~\ref{fig:appendix_c_gradcam_dullrazor} presents representative images processed using DullRazor and their associated Grad-CAM visualizations. DullRazor applies morphological operations and interpolation to identify and replace hair-affected image regions. The examples illustrate the resulting image appearance and attribution behavior relative to the matched baseline condition.
+
+These examples are provided for qualitative inspection only. Differences between the baseline and DullRazor attribution maps are quantified by the paired EDI analyses reported in Chapters~4 and~5 rather than inferred from the selected visual examples.
+
+\begin{figure}[H]
+\centering
+\includegraphics[height=0.85\textheight,keepaspectratio]{figures/fig_appendix_c_gradcam_dullrazor.png}
+\caption{Representative DullRazor-processed images and associated Grad-CAM visualizations from the supplementary qualitative cohort.}
+\label{fig:appendix_c_gradcam_dullrazor}
+\end{figure}
+
+
+
+
+%==========================================================================================
+\section{Telea Image and Attribution Examples}
+
+Figure~\ref{fig:appendix_c_gradcam_telea} presents representative images processed using Telea fast-marching inpainting and their associated Grad-CAM visualizations. Telea preprocessing reconstructs identified artifact regions using information propagated from the boundaries of those regions. The examples illustrate the resulting image appearance and attribution patterns within matched baseline–preprocessing comparisons.
+
+The displayed cases are descriptive examples rather than evidence that Telea necessarily preserves attribution behavior for every image or evaluation configuration. Its relative explanation stability is determined from the complete quantitative EDI cohort reported in Chapters~4 and~5.
+
+\begin{figure}[H]
+\centering
+\includegraphics[height=0.85\textheight,keepaspectratio]{figures/fig_appendix_c_gradcam_telea.png}
+\caption{Representative Telea-processed images and associated Grad-CAM visualizations from the supplementary qualitative cohort.}
+\label{fig:appendix_c_gradcam_telea}
+\end{figure}
+
+
+%==========================================================================================
+\section{Navier-Stokes Image and Attribution Examples}
+
+Figure~\ref{fig:appendix_c_gradcam_navier_stokes} presents representative images processed using Navier-Stokes inpainting and their associated Grad-CAM visualizations. This method reconstructs identified artifact regions by propagating surrounding image information into the masked areas. The examples provide visual context for examining how the reconstructed images and corresponding attributions differ from their matched baseline conditions.
+
+The displayed cases are illustrative and do not establish the aggregate stability of Navier-Stokes preprocessing. Quantitative conclusions regarding explanation drift are based on the complete paired EDI analyses reported in Chapters~4 and~5.
+
+\begin{figure}[H]
+\centering
+\includegraphics[height=0.85\textheight,keepaspectratio]{figures/fig_appendix_c_gradcam_navier_stokes.png}
+\caption{Representative Navier-Stokes-processed images and associated Grad-CAM visualizations from the supplementary qualitative cohort.}
+\label{fig:appendix_c_gradcam_navier_stokes}
+\end{figure}
+
+
+%==========================================================================================
+\section{HDBMIE Image and Attribution Examples}
+
+Figure~\ref{fig:appendix_c_gradcam_hdbmie} presents representative images processed using HDBMIE and their associated Grad-CAM visualizations. HDBMIE was a study-specific hybrid transformation combining Telea-based artifact reconstruction, bilateral filtering, CLAHE-based luminance enhancement, and unsharp masking. These operations were intended to reconstruct masked artifact regions, preserve local edges, enhance luminance contrast, and sharpen the resulting image. The examples provide visual context for examining how the combined transformation coincided with differences between matched baseline and preprocessing-condition attribution maps.
+
+The selected cases are illustrative and do not independently establish whether HDBMIE increases or decreases attribution stability. Its explanation-drift behavior is evaluated quantitatively using the complete paired EDI cohorts reported in Chapters~4 and~5.
+
+\begin{figure}[H]
+\centering
+\includegraphics[height=0.85\textheight,keepaspectratio]{figures/fig_appendix_c_gradcam_hdbmie.png}
+\caption{Representative HDBMIE-processed images and associated Grad-CAM visualizations from the supplementary qualitative cohort.}
+\label{fig:appendix_c_gradcam_hdbmie}
+\end{figure}
+
+%==========================================================================================
+\section{Diffusion Image and Attribution Examples}
+
+Figure~\ref{fig:appendix_c_gradcam_diffusion} presents representative images processed using the deterministic diffusion-inspired condition and their associated Grad-CAM visualizations. This study-specific transformation applied iterative smoothing and reconstruction-oriented operations that modified local texture, boundaries, and image appearance; it was not a trained denoising diffusion model. The examples provide visual context for examining how this condition coincided with differences between matched baseline and preprocessing-condition attribution maps.
+
+The selected cases are illustrative and should not be used independently to infer the aggregate attribution stability of the diffusion-inspired condition. Quantitative conclusions are based on the complete paired EDI analyses reported in Chapters~4 and~5.
+
+\begin{figure}[H]
+\centering
+\includegraphics[height=0.85\textheight,keepaspectratio]{figures/fig_appendix_c_gradcam_diffusion.png}
+\caption{Representative diffusion-processed images and associated Grad-CAM visualizations from the supplementary qualitative cohort.}
+\label{fig:appendix_c_gradcam_diffusion}
+\end{figure}
+
+
+
+%==========================================================================================
+\section{Fixed Untrained CNN Image and Attribution Examples}
+
+Figure~\ref{fig:appendix_c_gradcam_fixed_untrained_cnn} presents representative images transformed using the fixed untrained convolutional neural network and their associated Grad-CAM visualizations. The same randomly initialized transformation network was applied without task-specific training, providing a nonlinear image transformation distinct from the classical preprocessing methods evaluated in this study. The examples provide visual context for comparing its outputs and attribution patterns with those of the matched baseline condition.
+
+The term \emph{fixed untrained CNN preprocessing} is used to distinguish this transformation from a learned restoration or enhancement model. The selected cases are illustrative and do not independently establish its aggregate explanation-stability behavior. Quantitative conclusions are based on the complete paired EDI analyses reported in Chapters~4 and~5.
+
+\begin{figure}[H]
+\centering
+\includegraphics[height=0.85\textheight,keepaspectratio]{figures/fig_appendix_c_gradcam_fixed_untrained_cnn.png}
+\caption{Representative images transformed using the fixed untrained CNN and their associated Grad-CAM visualizations from the supplementary qualitative cohort.}
+\label{fig:appendix_c_gradcam_fixed_untrained_cnn}
+\end{figure}
+
+
+
+
+
+
+\section{Material Migrated from Appendix D}
+% Implementation specifications, artifact inventories, and reproduction instructions.
+
+\section{Computational Environment}
+\label{sec:computational_environment}
+
+Model training, attribution generation, remediation, aggregation, and statistical analysis were conducted in managed notebook environments using GPU-accelerated and CPU-based runtimes as appropriate to each workflow. Training and attribution-generation notebooks used TensorFlow-compatible GPU runtimes, whereas manifest auditing, statistical analysis, and dissertation-artifact generation were primarily performed using CPU-based Python workflows.
+
+Table~\ref{tab:computational_environment} summarizes the principal runtime and software components used in the final analytical pipeline. Because managed notebook platforms may update their underlying operating systems, drivers, and preinstalled packages, the table distinguishes explicitly controlled dependencies from runtime components supplied by the execution environment. Reported package versions should correspond to the final successful notebook executions rather than to versions assumed from earlier development runs.
+
+\input{tables/tbl_appD_computational_environment}
+
+
+\section{Software Framework}
+
+The experimental framework was implemented in Python using open-source libraries for deep learning, image processing, data management, statistical analysis, and visualization. TensorFlow and Keras supported EfficientNet-B0 model construction, transfer learning, training, fine-tuning, inference, and gradient-based attribution generation. OpenCV, NumPy, and Pillow supported image loading, resizing, morphological processing, inpainting, intensity transformation, and attribution-map alignment.
+
+Pandas and NumPy were used to construct and harmonize experiment manifests, enforce comparison keys, aggregate repeated observations, and export analytical datasets. SciPy and Scikit-learn supported correlation analysis, nonparametric testing, rank comparison, principal component analysis, and related statistical procedures. Bootstrap routines were implemented directly in Python to preserve image-level clustering within evaluation configurations. Matplotlib and associated plotting utilities were used to generate dissertation figures from audited analytical data.
+
+Six attribution methods were incorporated: Grad-CAM, Grad-CAM++, Eigen-CAM, Score-CAM, Integrated Gradients, and SHAP. These methods were generated through method-specific implementations while retaining common image cohorts, resolutions, model conditions, and output conventions. Attribution maps were stored as numerical arrays so that quality-control and similarity calculations could be performed on the underlying values rather than on rendered color overlays.
+
+The implementation was distributed across configuration-specific training notebooks, attribution-generation workflows, remediation notebooks, and the centralized NB11 aggregation and validation notebook. The centralized workflow harmonized internal and external outputs, verified the balanced factorial design, recalculated EDI quantities, performed sensitivity analyses, and generated the final statistical tables and figures. Configuration-specific notebooks remained the authoritative records for task definitions, dataset partitions, training settings, and model artifacts.
+
+\section{Dataset Management and Experimental Organization}
+
+The dissertation incorporated nine evaluation configurations derived from seven medical-imaging datasets. Four internal dermoscopic configurations were constructed from HAM10000 and ISIC 2019: HAM10000, ISIC 2019, a combined HAM10000-ISIC 2019 configuration, and a directed HAM10000-to-ISIC 2019 transfer configuration. Five external configurations used APTOS fundus photography, BreakHis histopathology, COVIDx chest radiography, NIH ChestXray14, and SIPaKMeD cervical cytology.
+
+Each configuration implemented a task-appropriate binary classification problem. The internal configurations used melanoma versus non-melanoma labels. External labels were defined according to their respective clinical tasks, including diabetic-retinopathy status, benign versus malignant histopathology, COVID-19 status, pneumonia-related findings, and binary cervical-cytology groupings. Label definitions and source metadata were preserved within the configuration-specific workflows rather than forced into a shared diagnostic vocabulary across modalities.
+
+Dataset acquisition, metadata construction, image-path verification, label assignment, and partition management were performed within the corresponding configuration notebooks. Stable image identifiers were retained throughout preprocessing, training, attribution generation, and manifest aggregation. These identifiers enabled baseline and preprocessing-condition attribution maps to be paired without relying solely on directory order or filename position.
+
+For EDI analysis, each configuration contributed a deterministic class-balanced cohort of 40 images. The same image identities were retained across the six preprocessing transformations, six attribution methods, and four resolutions within a configuration. This repeated-measures structure supported paired attribution comparison while preventing variation in image composition from being mistaken for preprocessing-associated drift.
+
+Experimental outputs were organized using configuration-, preprocessing-, resolution-, and attribution-specific identifiers. Stored artifacts included dataset metadata, partition records, model checkpoints, prediction results, numerical attribution maps, quality-control summaries, and EDI comparison records. These outputs were subsequently harmonized into internal and combined manifests used for the analyses reported in Chapters~4 and~5.
+
+
+% VERIFICATION REQUIRED BEFORE REPOSITORY PUBLICATION:
+% This section and tbl_appD_training_configuration conflict with Chapter 3
+% regarding output encoding, loss function, and training schedules.
+% Reconcile against the original internal and external training notebooks.
+% Do not treat these settings as verified or apply them to later pilot studies.
+
+\section{Model Training Configuration}
+
+All configurations used EfficientNet-B0 classifiers with a single sigmoid output for their respective binary classification tasks. Models were trained separately for each evaluation configuration, preprocessing condition, and image resolution. A matched baseline model was retained at each applicable configuration and resolution so that attribution comparisons did not combine outputs from unrelated model conditions.
+
+The internal and external workflows shared the same architecture, loss function, optimizer family, batch size, resolution grid, and random-seed convention. Their epoch schedules and initial learning rates differed because the external validation notebooks were designed as shorter configuration-specific validation runs. Table~\ref{tab:training_configuration} therefore reports the internal and external settings separately rather than presenting one schedule as universal across the complete corpus.
+
+% \input{tables/tbl_appD_training_configuration}
+% Historical training-configuration table retained from earlier drafts.
+% Superseded by verified experiment-specific notebook configurations.
+% Do not use for repository reproduction.
+
+\section{Preprocessing Pipeline Implementation}
+
+Each preprocessing transformation defined a distinct model condition. Images assigned to that condition were transformed using the corresponding pipeline before being supplied to the model-training and evaluation workflow. The baseline condition retained the standardized input representation without application of one of the six evaluated transformations.
+
+DullRazor, Telea, and Navier-Stokes used deterministic classical image-processing operations. DullRazor applied morphological masking and replacement of hair-like structures, whereas Telea and Navier-Stokes used different inpainting mechanisms to reconstruct masked regions. HDBMIE was implemented as a study-specific hybrid transformation combining Telea-based artifact reconstruction, bilateral filtering, CLAHE-based luminance enhancement, and unsharp masking. The fixed untrained CNN applied a deterministic nonlinear transformation using a randomly initialized convolutional network whose weights were not optimized for classification, restoration, or enhancement.
+
+The preprocessing-condition and baseline models were trained and evaluated independently at each image resolution. EDI comparisons subsequently paired attribution maps using the evaluation configuration, preprocessing condition, attribution method, resolution, and image identifier. This design treated preprocessing as a controlled experimental factor while preventing differences in image identity, attribution method, or spatial resolution from confounding an individual paired comparison.
+
+Table~\ref{tab:preprocessing_methods_appendix} summarizes the baseline reference and six preprocessing transformations.
+
+
+
+
+\input{tables/tbl_appD_preprocessing_methods}
+
+\section{Attribution-Map Generation Procedures}
+
+Six attribution methods were evaluated: Grad-CAM, Grad-CAM++, Eigen-CAM, Score-CAM, Integrated Gradients, and SHAP. These methods represent gradient-weighted class activation mapping, higher-order gradient weighting, activation decomposition, score-weighted activation mapping, path-integrated gradients, and game-theoretic feature attribution, respectively. Including methods with different computational foundations enabled preprocessing-associated explanation drift to be evaluated beyond a single attribution family.
+
+Attribution maps were generated separately for matched baseline and preprocessing-condition models. Within each paired comparison, the same evaluation configuration, image identity, attribution method, and resolution were retained. The configuration-specific target output was applied consistently to both members of the pair so that the resulting EDI value reflected differences between matched attribution conditions rather than differences in attribution target.
+
+Method-specific outputs were converted to two-dimensional numerical attribution maps and aligned to a common comparison size. The numerical arrays, rather than rendered color overlays, were used for Pearson-correlation and SSIM calculations. Rendered overlays were generated separately for qualitative inspection and dissertation figures.
+
+Before similarity metrics were accepted, attribution maps were evaluated for missing files, unreadable arrays, nonfinite values, zero spatial range, and constant-map behavior. Grad-CAM and Grad-CAM++ outputs generated by an earlier implementation exhibited invalid collapsed-map behavior and were regenerated through the remediation workflow described in Chapters~3 and~5. Only remediated Grad-CAM and Grad-CAM++ metrics were retained in the final analytical manifests.
+
+The attribution-generation workflows preserved experiment identifiers, image identifiers, model conditions, resolutions, and attribution-method labels. These fields formed the provenance keys used during manifest harmonization, quality-control auditing, formula recalculation, and canonical integration.
+
+
+\section{Explanation Drift Index Computation}
+
+EDI was calculated for every matched baseline and preprocessing-condition attribution pair. Let \(r\) denote the Pearson correlation between the aligned attribution maps and let \(s\) denote their structural similarity value. Correlation drift and structural drift were calculated as
+
+\begin{equation}
+D_{\mathrm{corr}}=\frac{1-r}{2}
+\end{equation}
+
+and
+
+\begin{equation}
+D_{\mathrm{struct}}=1-s,
+\end{equation}
+
+respectively. The primary equal-weight EDI was then calculated as
+
+\begin{equation}
+\mathrm{EDI}_{\mathrm{primary}}
+=
+\frac{
+D_{\mathrm{corr}}
++
+D_{\mathrm{struct}}
+}{2}.
+\end{equation}
+
+The complete Pearson-correlation range was retained, giving \(0\leq D_{\mathrm{corr}}\leq1\). The primary analysis also retained the complete SSIM range, giving \(0\leq D_{\mathrm{struct}}\leq2\) and \(0\leq\mathrm{EDI}_{\mathrm{primary}}\leq1.5\). EDI values greater than one were therefore valid under the primary formulation and were not treated automatically as calculation errors.
+
+Each comparison record preserved the source correlation and SSIM values together with the derived drift components and composite EDI. During aggregation, these derived quantities were recalculated independently and compared with their stored values using a predefined floating-point tolerance. Rows exceeding that tolerance were flagged for investigation before inclusion in the analytical cohort.
+
+Alternative component weights, alternative composite formulations, zero-clipped SSIM, and symmetrically normalized SSIM were evaluated as sensitivity analyses. These variants were retained as derived analytical fields rather than substituted silently for the primary formulation. This separation preserved a consistent primary definition while allowing the effects of scale, component weighting, and negative structural similarity to be examined explicitly.
+
+\section{Aggregation and Statistical Analysis Workflow}
+
+Configuration-specific outputs were harmonized through the centralized NB11 aggregation and validation workflow. Internal dermoscopic records were first consolidated into an internal manifest containing classification metrics, attribution-comparison metrics, model identifiers, image identifiers, and artifact paths. External records were standardized to a compatible schema and integrated with the internal records to form the combined analytical manifest.
+
+The final combined manifest contained 51,840 paired attribution comparisons across nine evaluation configurations. Completeness was evaluated over 1,296 factorial cells defined by evaluation configuration, preprocessing transformation, attribution method, and resolution. Each valid cell was required to contain exactly 40 rows and 40 unique image identifiers. The workflow additionally tested for missing factor levels, duplicate comparison keys, missing or nonfinite metrics, unexpected row counts, and formula-recalculation errors.
+
+The internal manifest was retained as the source for analyses requiring harmonized predictive-performance or supplementary attribution metrics that were not available for every external configuration. The combined manifest was used for cross-configuration EDI summaries, preprocessing and attribution comparisons, resolution analysis, component decomposition, formulation sensitivity, negative-SSIM sensitivity, clustered bootstrap analysis, and configuration-level profile analysis. This separation prevented unavailable external fields from being interpreted as observed zero values or from silently reducing the analytical cohort.
+
+Statistical outputs included descriptive summaries, rank comparisons, nonparametric tests, component-weight sensitivity, alternative-formulation analyses, Euclidean profile distances, exploratory principal component analysis, and leave-one-configuration-out influence assessment. Image-level bootstrap resampling was performed within evaluation configurations so that the 144 repeated observations associated with an image were retained together during resampling. Configuration-level multivariate analyses were interpreted as exploratory because the evaluation configuration, rather than the manifest row, was the effective analytical unit.
+
+Tables and figures were generated programmatically from audited dataframes and their supporting CSV exports. Static LaTeX tables and image files were written from the same analytical objects used to produce the reported numerical summaries, reducing the need for manual transcription and enabling later regeneration when the canonical manifest changed.
+
+
+\section{Experimental Artifact Management}
+\label{sec:experimental_artifacts_management}
+Experimental artifacts were organized by evaluation configuration, preprocessing condition, image resolution, attribution method, and experiment identifier. Configuration-specific directories contained model checkpoints, training histories, prediction outputs, dataset metadata, numerical attribution maps, progress records, and evaluation summaries. Aggregated directories contained harmonized manifests, audit reports, statistical tables, figure-source data, rendered figures, and LaTeX exports.
+
+Canonical analytical manifests were treated separately from intermediate and remediation outputs. Before Grad-CAM and Grad-CAM++ integration, the existing canonical internal manifest was preserved in a timestamped backup directory. Regenerated metrics were first written to isolated remediation outputs and were integrated only after completeness, uniqueness, map-quality, metric-range, and formula-recalculation checks passed. Integration provenance was recorded in timestamped JSON and CSV audit files.
+
+The canonical integration replaced the affected Grad-CAM and Grad-CAM++ metric fields while preserving unaffected attribution methods and experimental records. Regenerated numerical heatmaps remained in the dedicated remediation archive rather than being copied over the earlier heatmap files. Consequently, qualitative figures requiring remediated Grad-CAM or Grad-CAM++ arrays were generated directly from the remediation archive and documented through figure-specific provenance exports.
+
+Table~\ref{tab:experimental_artifacts} summarizes the principal artifact categories and their roles within the reproducibility workflow.
+
+\input{tables/tbl_appD_experimental_artifacts}
+
+
+\section{Reproducibility Considerations}
+
+In this dissertation, \emph{reproducibility} refers to the extent to which the documented formulas, comparison keys, manifest schema, configuration parameters, computational procedures, quality-control rules, scripts, and analytical artifacts permit the methodology and reported calculations to be repeated and audited. This use does not imply that the findings have already been independently reproduced by another research group, software implementation, model architecture, or set of training runs.
+
+Reproducibility controls were applied at the dataset, model, attribution, aggregation, and reporting stages. Configuration notebooks retained explicit random seeds, resolution settings, preprocessing labels, model identifiers, image identifiers, and output locations. Fixed dataset partitions were used for model development and evaluation, while deterministic class-balanced image cohorts were retained for paired EDI comparisons within each evaluation configuration.
+
+The shared experimental architecture did not require every configuration to use an identical training schedule or diagnostic label definition. Instead, configuration-specific task definitions and training settings were recorded explicitly, while the factors required for EDI comparison were harmonized across configurations. These common factors comprised six preprocessing transformations, six attribution methods, four resolutions, and 40 paired images per factorial cell.
+
+Numerical attribution arrays and source similarity values were retained so that EDI could be recalculated independently of rendered figures. Quality-control procedures evaluated missing files, nonfinite values, zero-range maps, constant maps, duplicate keys, incomplete cells, and formula discrepancies. Remediation outputs were isolated from the canonical manifest until all validation checks passed, and superseded canonical records were preserved through timestamped backups and integration audits.
+
+Statistical tables and figures were generated programmatically from audited analytical dataframes. Supporting CSV exports preserved the numerical values underlying major figures and tables, while figure-specific provenance files recorded the rows and artifact paths used for selected qualitative examples. This approach reduced manual transcription and made it possible to regenerate dissertation artifacts after updates to the analytical manifest.
+
+Several limitations remain. Managed notebook environments may change package versions, drivers, and available hardware over time. Fixed random seeds reduce uncontrolled variation but do not guarantee bitwise-identical execution across all GPU operations or software environments. Public datasets may also change their access mechanisms or directory organization. Reproduction should therefore rely on the documented dataset versions, configuration metadata, stored partitions, model identifiers, numerical outputs, and audit records rather than on notebook source code alone.
+
+
+\section{Material Migrated from Appendix E}
+% Extended hair-removal literature matrix.
+
+
+This appendix provides the extended literature matrix supporting the synthesis of dermoscopic hair-detection and reconstruction methods presented in Chapter~2. The table records the principal detection strategy, reconstruction or inpainting procedure, operating color space, and reported evaluation cohort for each reviewed study.
+
+\input{tables/tbl_appE_hair_removal_studies}
+
+

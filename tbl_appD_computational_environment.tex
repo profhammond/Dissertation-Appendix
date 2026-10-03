@@ -1,0 +1,50 @@
+\begin{table}[H]
+\centering
+\caption{Principal computational components used in the dissertation workflow.}
+\label{tab:computational_environment}
+
+\small
+\renewcommand{\arraystretch}{1.20}
+\setlength{\tabcolsep}{5pt}
+
+\begin{tabular}{p{3.7cm}p{8.3cm}}
+\toprule
+\textbf{Component} & \textbf{Implementation} \\
+\midrule
+
+Execution environment
+& Managed Google Colab notebook runtimes with GPU acceleration for model training and attribution generation and CPU-based execution for aggregation and statistical analysis \\
+
+Persistent storage
+& Google Drive dissertation project directories containing datasets, model artifacts, attribution maps, manifests, audit records, tables, and figures \\
+
+Programming language
+& Python \\
+
+Deep-learning framework
+& TensorFlow and Keras \\
+
+Model architecture
+& EfficientNet-B0 classifiers \\
+
+Image processing
+& OpenCV, NumPy, and Pillow \\
+
+Data management
+& Pandas and NumPy \\
+
+Statistical analysis
+& SciPy and Scikit-learn \\
+
+Visualization
+& Matplotlib and related Python plotting utilities \\
+
+Attribution methods
+& Grad-CAM, Grad-CAM++, Eigen-CAM, Score-CAM, Integrated Gradients, and SHAP \\
+
+Artifact management
+& Configuration-specific experiment directories, model checkpoints, prediction exports, numerical attribution maps, canonical manifests, remediation audits, and provenance-preserving dissertation exports \\
+
+\bottomrule
+\end{tabular}
+\end{table}

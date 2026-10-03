@@ -1,0 +1,9 @@
+{
+  "source_filename": "HAMMOND_DISSERTATION (12).zip",
+  "source_zip_sha256": "d03f4623458278731007e217a23f4e8ba848ed113e3187a54b5159c5bd8acb55",
+  "appendix_q_sha256": "dc1320865dbb804d856bd5e4aeda4df34bc0476ea1788008c4ae58de91de8e3c",
+  "checkpoint_date": "2026-10-03",
+  "repository_target": "https://github.com/profhammond/Dissertation-Appendix",
+  "publication_performed": false,
+  "running_audit": "EDI_Remaining_Method_Recorded_Pair_Protocol_Reproduction_v3.ipynb"
+}

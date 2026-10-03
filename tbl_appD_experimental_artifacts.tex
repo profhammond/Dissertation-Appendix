@@ -1,0 +1,34 @@
+\begin{table}[H]
+\centering
+\caption{Experimental artifacts generated and retained during dissertation analysis.}
+\label{tab:experimental_artifacts}
+
+\small
+\renewcommand{\arraystretch}{1.25}
+
+\begin{tabular}{p{3.8cm}p{8.2cm}}
+\toprule
+\textbf{Artifact Type} & \textbf{Description} \\
+\midrule
+
+Experiment Directories & Per-configuration folders containing model outputs, logs, and exported metrics \\
+
+Model Files & Trained EfficientNet-B0 model files retained for downstream evaluation and Grad-CAM extraction \\
+
+Classification Metrics & ROC--AUC, PR--AUC, melanoma recall, specificity, F1-score, threshold metrics, and related diagnostic summaries \\
+
+Prediction Exports & Per-image model prediction outputs used for threshold-sensitive and aggregate analysis \\
+
+Grad-CAM Heatmaps & Attribution maps generated from trained models for representative evaluation cohorts \\
+
+EDI Measurements & Explanation Drift Index results comparing baseline and preprocessed Grad-CAM attribution maps \\
+
+Aggregated DataFrames & Master aggregation files, including classification summaries and EDI result tables \\
+
+Dissertation Figures & Publication-quality visualizations generated for methodology, results, and appendix sections \\
+
+Dissertation Tables & LaTeX-ready summary tables generated from aggregated experimental outputs \\
+
+\bottomrule
+\end{tabular}
+\end{table}

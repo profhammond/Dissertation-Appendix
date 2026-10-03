@@ -1,0 +1,45 @@
+\begin{table}[H]
+\centering
+\caption{Baseline reference and preprocessing transformations used in the dissertation framework.}
+\label{tab:preprocessing_methods_appendix}
+
+\small
+\renewcommand{\arraystretch}{1.18}
+\setlength{\tabcolsep}{4pt}
+
+\begin{tabular}{p{3.2cm}p{3.8cm}p{5.0cm}}
+\toprule
+\textbf{Condition} & \textbf{Category} & \textbf{Implementation Role} \\
+\midrule
+
+Baseline
+& Reference condition
+& Matched model and attribution source used as the comparison reference; not counted as one of the six preprocessing transformations \\
+
+DullRazor
+& Morphological artifact removal
+& Detection and replacement of hair-like structures using morphological masking and interpolation-oriented reconstruction \\
+
+Telea
+& Fast-marching inpainting
+& Reconstruction of masked regions by propagating information inward from surrounding region boundaries \\
+
+Navier--Stokes
+& PDE-based inpainting
+& Reconstruction of masked regions through structure-aware propagation from neighboring image content \\
+
+Diffusion-inspired processing
+& Deterministic iterative image transformation
+& Study-specific smoothing and reconstruction-oriented operations affecting local texture, boundaries, and image appearance; not a trained denoising diffusion model \\
+
+HDBMIE
+& Study-specific hybrid enhancement
+& Telea-based artifact reconstruction followed by bilateral filtering, CLAHE-based luminance enhancement, and unsharp masking \\
+
+Fixed untrained CNN
+& Deterministic nonlinear transformation
+& Application of a fixed randomly initialized convolutional network without task-specific or restoration-specific training \\
+
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,305 @@
+\begingroup
+
+\footnotesize
+\renewcommand{\arraystretch}{1.15}
+\setlength{\tabcolsep}{2pt}
+\setlength{\LTleft}{\fill}
+\setlength{\LTright}{\fill}
+\setlength{\emergencystretch}{1.5em}
+
+% Suppress harmless underfull warnings in ragged table cells.
+\hbadness=10000
+
+\begin{longtable}{
+@{}
+>{\Centering\arraybackslash}p{.85cm}
+>{\RaggedRight\arraybackslash}p{2.45cm}
+>{\RaggedRight\arraybackslash}p{3.45cm}
+>{\RaggedRight\arraybackslash}p{3.25cm}
+>{\Centering\arraybackslash}p{1.35cm}
+>{\RaggedRight\arraybackslash}p{2.95cm}
+@{}
+}
+
+\caption{Selected dermoscopic hair-detection and reconstruction studies. The comparison identifies the principal hair-detection strategy, reconstruction or inpainting procedure, operating color space, and reported evaluation cohort.}
+\label{tab:app_hair_removal_studies}
+\\
+
+\toprule
+\textbf{Year} &
+\textbf{Author} &
+\textbf{Hair-detection method} &
+\textbf{Reconstruction or inpainting method} &
+\textbf{Color space} &
+\textbf{Evaluation images or dataset} \\
+\midrule
+\endfirsthead
+
+\multicolumn{6}{c}{\tablename\ \thetable\ (continued)}\\
+\toprule
+\textbf{Year} &
+\textbf{Author} &
+\textbf{Hair-detection method} &
+\textbf{Reconstruction or inpainting method} &
+\textbf{Color space} &
+\textbf{Evaluation images or dataset} \\
+\midrule
+\endhead
+
+\midrule
+\multicolumn{6}{r}{\textit{Continued on next page}}\\
+\endfoot
+
+\bottomrule
+\multicolumn{6}{@{}l}{\footnotesize
+\(\star\) Deep learning applied to hair detection or reconstruction.}\\
+\endlastfoot
+
+1997 &
+Lee et al. \cite{lee_dullrazor_1997} &
+Morphological closing &
+Bilinear interpolation &
+Gray &
+5 \\
+
+1998 &
+Fleming et al. \cite{fleming_techniques_1998} &
+Steger's algorithm \cite{steger_unbiased_1998}, linear searching, and discriminant learning &
+Lobregt-Viergever snake model \cite{lobregt_discrete_1995} for gap filling &
+RGB &
+87 \\
+
+2003 &
+Schmid-Saugeon et al. \cite{schmid-saugeona_towards_2003} &
+Morphological closing &
+Median filtering &
+CIE \(L^*u^*v^*\) &
+200 \\
+
+2008 &
+Zhou et al. \cite{zhou_feature-preserving_2008} &
+Steger's algorithm \cite{steger_unbiased_1998} and two-dimensional Gaussian partial derivatives &
+Exemplar-based reconstruction &
+CIE \(L^*u^*v^*\) &
+460 \\
+
+2009 &
+Xie et al. \cite{xie_pde-based_2009} &
+Morphological edge detection and thresholding &
+Anisotropic diffusion \cite{perona_scale-space_1990} and nonlinear PDE-based reconstruction &
+Gray &
+40 \\
+
+2010 &
+Nguyen et al. \cite{nguyen_segmentation_2010} &
+Morphological closing, matched filtering, and Gaussian curve fitting &
+Linear interpolation &
+RGB &
+\textit{Not reported} \\
+
+2011 &
+Kiani et al. \cite{kiani_e-shaver_2011} &
+Prewitt edge detection \cite{acharjya_study_2012} &
+Color averaging &
+CIE \(L^*u^*v^*\) &
+5 \\
+
+2011 &
+Fiorese et al. \cite{fiorese_virtualshave_2011} &
+Top-hat operator &
+PDE-based inpainting \cite{bertalmio_image_2000} &
+Gray &
+20 \\
+
+2011 &
+Abbas et al. \cite{abbas_hair_2011} &
+Difference-of-Gaussian filtering \cite{koehoorn_efficient_2016} &
+Coherence transport \cite{bornemann_fast_2007} &
+CIE \(L^*a^*b^*\) &
+100 \\
+
+2013 &
+Huang et al. \cite{huang_robust_2013} &
+Multiscale matched filtering &
+Median filtering &
+CIE \(L^*a^*b^*\) &
+20 \\
+
+2013 &
+Toossi et al. \cite{toossi_effective_2013} &
+Canny edge detection \cite{acharjya_study_2012} &
+Coherence transport \cite{bornemann_fast_2007} &
+RGB &
+50 \\
+
+2015 &
+Xie et al. \cite{xie_no-reference_2015} &
+Adaptive thresholding &
+\textit{Not applicable} &
+CIE \(L^*a^*b^*\) &
+110 \\
+
+2015 &
+Maglogiannis et al. \cite{maglogiannis_hair_2015} &
+Bottom-hat transform, Laplacian of Gaussian, and Sobel filtering \cite{acharjya_study_2012} &
+Interpolation &
+Gray &
+10 \\
+
+2016 &
+Koehoorn et al. \cite{koehoorn_efficient_2016} &
+Multiscale skeleton analysis &
+Fast marching method \cite{telea_image_2004} &
+HSV and RGB &
+\(\geq 300\) \\
+
+2017 &
+Lee et al. \cite{lee_hair_2017} &
+Top-hat transform and multiscale curvilinear matched filtering &
+\textit{Not applicable} &
+YUV &
+60 \\
+
+2017 &
+Bibiloni et al. \cite{bibiloni_skin_2017} &
+Soft-color top-hat transforms &
+Soft-color morphological operators &
+CIE \(L^*a^*b^*\) &
+PH2 \\
+
+2018 &
+Salido and Ruiz \cite{salido_hair_2018} &
+Morphological bottom-hat operator &
+Harmonic inpainting \cite{parisotto2016matlab} &
+CIE \(L^*a^*b^*\) &
+PH2 \\
+
+2019 \(\star\) &
+Attia et al. \cite{attia_digital_2019} &
+Hybrid network &
+Fast marching method \cite{telea_image_2004} &
+RGB &
+\(\geq 300\) \\
+
+2020 &
+Zaqout \cite{zaqout_efficient_2020} &
+Morphological bottom-hat operator &
+Block-based histogram processing and morphological closing &
+CIE \(L^*a^*b^*\) &
+200 \\
+
+2020 \(\star\) &
+Talavera- Martinez et al. \cite{talavera_martinez_Encoder_2020} &
+Convolutional encoder-decoder &
+Convolutional encoder-decoder &
+\textit{Not reported} &
+PH2, DermQuest, DermIS, EDRA2002, and ISIC \\
+
+2020 &
+Deif et al. \cite{deif_skin_2020} &
+Morphological operations &
+Morphological reconstruction &
+Gray &
+ISIC Archive (10,135) \\
+
+2021 &
+Ramella \cite{Ramella_Hair_2021} &
+Top-hat operator &
+Region filling &
+HSV and RGB &
+PH2, ISIC 2016, and NH13 \\
+
+2021 \(\star\) &
+Li et al. \cite{li_digital_2021} &
+U-Net &
+Gated convolution and SN-PatchGAN &
+RGB &
+ISIC 2018 \\
+
+2022 \(\star\) &
+Ashraf et al. \cite{ashraf_melanoma_2022} &
+U-Net, residual U-Net, and improved ResUNet++ &
+U-Net, residual U-Net, and improved ResUNet++ &
+RGB &
+ISIC 2016 and ISIC 2017 \\
+
+2022 \(\star\) &
+Kaur et al. \cite{Kaur2022HairlinesRA} &
+Intensity-adjustment hair removal and MCACNN &
+Bilinear interpolation &
+CIE \(L^*a^*b^*\) &
+HAM10000 \\
+
+2022 \(\star\) &
+Bardou et al. \cite{bardou_hair_2022} &
+Autoencoder &
+Variational autoencoder &
+RGB &
+HAM10000 \\
+
+2022 &
+Bansal et al. \cite{bansal_detection_2022} &
+Morphological operations &
+Morphological reconstruction &
+RGB &
+HAM10000 \\
+
+2022 \(\star\) &
+Lama et al. \cite{lama_chimeranet_2023} &
+ChimeraNet architecture &
+ChimeraNet architecture &
+RGB &
+ISIC 2018 \\
+
+2023 \(\star\) &
+Delibasis et al. \cite{delibasis_automated_2023} &
+Multilayer perceptron neural network &
+DeepLabv3+ encoder-decoder &
+RGB &
+PH2 and 200 HAM10000 images \\
+
+2023 &
+Kasmi et al. \cite{kasmi_sharprazor_2023} &
+Entropy-based adaptive thresholding &
+Vector-based reconstruction &
+RGB &
+Three cohorts: 520, 707, and 25 images \\
+
+2023 \(\star\) &
+Lee and You \cite{lee_Enhanced_2023} &
+Entropy-based adaptive thresholding &
+Transformer-based image inpainting &
+RGB &
+ISIC 2020 \\
+
+2024 \(\star\) &
+Barin et al. \cite{barin_improved_2024} &
+Top-hat transform, local brightening, flat-field correction, and thresholding &
+Discrete Laplace operator model &
+RGB &
+ISIC 2018 and NH13 \\
+
+2024 \(\star\) &
+Farooq et al. \cite{Farooq_2024} &
+Vision Transformer and Stable Diffusion hybrid &
+Deep-learning reconstruction &
+RGB &
+ISIC 2024 and synthetic extensions \\
+
+2025 \(\star\) &
+Van et al. \cite{VANTHANH_2025} &
+EfficientNet-based detection &
+EfficientNet-based deep-learning reconstruction &
+RGB &
+HAM10000 and HAM10000-Plus \\
+
+2026 \(\star\) &
+Ilea-Ghita \cite{IleaGhita_2026} &
+CNN-Transformer hybrid &
+Lightweight deep-learning lesion reconstruction &
+RGB, CIE \(L^*a^*b^*\), HSV, and YUV &
+HAM10000 \\
+
+\end{longtable}
+
+\endgroup

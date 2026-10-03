@@ -1,0 +1,29 @@
+\begin{table}[H]
+\centering
+\caption{Configuration-specific preprocessing ranks based on mean primary EDI. Rank 1 indicates the lowest mean explanation drift within an evaluation configuration.}
+\label{tab:appB_preprocessing_rank_by_configuration}
+\small
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lrrrrrr}
+\toprule
+Evaluation Configuration
+& Telea
+& \shortstack{Navier--\\Stokes}
+& DullRazor
+& HDBMIE
+& Diffusion
+& \shortstack{Fixed Untrained\\CNN} \\
+\midrule
+HAM10000 & 3 & 1 & 2 & 5 & 4 & 6 \\
+ISIC-derived & 2 & 1 & 3 & 4 & 6 & 5 \\
+Combined dermoscopy & 1 & 2 & 6 & 3 & 5 & 4 \\
+HAM$\rightarrow$ISIC & 2 & 3 & 1 & 4 & 6 & 5 \\
+APTOS Fundus & 1 & 4 & 2 & 6 & 3 & 5 \\
+BreakHis & 1 & 2 & 3 & 4 & 5 & 6 \\
+COVIDx CXR & 1 & 2 & 3 & 5 & 6 & 4 \\
+NIH ChestXray14 & 2 & 1 & 3 & 5 & 6 & 4 \\
+SIPaKMeD & 3 & 2 & 1 & 4 & 5 & 6 \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}

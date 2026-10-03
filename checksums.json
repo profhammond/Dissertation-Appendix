@@ -1,0 +1,21 @@
+{
+  ".gitignore": "8c381ef1db8fbb76ab431429a6e89656d69ce6a08c9a6f1c9854940ebb5992e8",
+  "README.md": "cda28d6201c5284692b043daaf4e787452f310c726517976e3713cd8ec30398f",
+  "docs/README.md": "fc0b1a063707b19d53572f2ef377d8eccd0fc4c416e49194cd184273d9668a06",
+  "docs/reproducibility_review.md": "9a3ae56eb8aadd24660a529417077f247c5e98c28780b1ea1953830d4e6cd7e0",
+  "historical/appendix_q_source.tex": "dc1320865dbb804d856bd5e4aeda4df34bc0476ea1788008c4ae58de91de8e3c",
+  "provenance/dependencies.csv": "719b23dee1be0f19108e292cba9a532ab5d050c09635b65508e1e0e82f579675",
+  "provenance/source.json": "03b172ff78505db8dfcd79d9bf5959ed08f7f78b6b618f0a867a5cc7a169d052",
+  "scripts/verify_package.py": "6be7e5eb3a5739a5b0b2c3549c666e1c5ee20d1bfa344ba21fee4c480f4e7b20",
+  "supplementary/figures/fig_appendix_b_edi_distribution_boxplots.png": "942daf7047383c67b675942df383f6516264b40871d0fd3a1c2b1424885e5ef9",
+  "supplementary/figures/fig_appendix_b_preprocessing_edi_comparison.png": "efd164637900c6ca448c51fc1b83ed354db37a740f54af05489a0ec1f14a2017",
+  "supplementary/figures/fig_appendix_b_resolution_edi_analysis.png": "fba50fdc79f9b34e5f7ed5878438b92a8ccfb2bcbddee8066ae2e60d5d1e5e1b",
+  "supplementary/tables/tbl_appA_complete_experiment_matrix.tex": "fd428ba5a4f3494268731eb3fe336370d2caf18c43603ce60ba9704b43f6d217",
+  "supplementary/tables/tbl_appB_preprocessing_rank_by_configuration.tex": "26c715b1735eb5dc0c253cdff35401377a77933a18aed1a57da2f7e0a2c3a759",
+  "supplementary/tables/tbl_appB_resolution_edi_summary.tex": "f905f074961c175648fa04415d7435d52f0e15a9aafa7cffbf734a6db1e6e8a4",
+  "supplementary/tables/tbl_appD_computational_environment.tex": "e57133c81a4ef56df996a52b7601d4bfb9e6122db2245e593dd89784e3e136a6",
+  "supplementary/tables/tbl_appD_experimental_artifacts.tex": "8e2e497385df379134fcc8a02617ae906febff743619f5fa87777d5ce4d20d53",
+  "supplementary/tables/tbl_appD_preprocessing_methods.tex": "8e95cdf7c801476f5682eb8ab24d9c635cbbed9382103975767460f6006a4497",
+  "supplementary/tables/tbl_appE_hair_removal_studies.tex": "31afa95176766de8cb297f3f4b2b47600d4bb56ad6c3f6e1d4955e74295bd79b",
+  "supplementary/tables/tbl_appendix_c_gradcam_examples.tex": "4cdedff4eeb8e6b51af0e17c81c2ff823ed91a8db90ca42314ac460f5ae73157"
+}
